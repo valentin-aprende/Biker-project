@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import { useState, useEffect } from 'react';
+import { ProductContext } from './context/product-context.jsx'
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -57,32 +59,21 @@ const Button= styled.button`
 
 
 function Customizer(){
-    const { id } = useParams();
-  const [product, setProduct] = useState(null);
 
+  const { id } = useParams();
+
+  const { products } = useContext(ProductContext);
+
+  const product = products.find(
+    p => p.id === (id)
+  ); 
   const [formData, setFormData] = useState({
     nombre: '',
     medida: '',
     color: '',
   });
 
-  useEffect(() => {
-  const getProduct = async () => {
-    try {
-      const response = await axios.get("/assets/products.json");
-
-      const selectedProduct = response.data.find(
-        p => p.id === (id)
-      );
-
-      setProduct(selectedProduct);
-    } catch (error) {
-      console.error("Fetch aint fetching:", error);
-    }
-  };
-
-  getProduct();
-}, [id]);
+  
 
  const handleChange = (e) => {
     setFormData({

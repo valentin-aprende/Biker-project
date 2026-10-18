@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { ProductContext } from "../context/product-context.jsx";
 import React, { useState, useEffect } from 'react';
 import styled from  'styled-components';
 import axios from 'axios';
@@ -22,22 +24,8 @@ const Sectiontitle = styled.h2`
 
 
 function ProductList() {
-    const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        const getProducts = async () => {
-            try {
-                const response = await axios.get('/assets/products.json');
-                setProducts(response.data);
-
-            } catch (error) {
-                console.error('Catch isnt catching', error);
-            }
-        };
-
-        getProducts();
-    }, []);
-
+    const { products } = useContext(ProductContext);
 
     return (
         <>
