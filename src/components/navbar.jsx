@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import logo from '../assets/Designer.png';
+import { Link } from "react-router-dom";
+
 
 
 const Nav = styled.nav`
@@ -9,7 +11,7 @@ const Nav = styled.nav`
   background-color: #d70202;
   padding: 10px;
   `
-const Logo= styled.a`
+const Logo= styled(Link)`
   display: flex;
   align-items: center;
   margin-right: auto;
@@ -43,7 +45,7 @@ function Navbar() {
             
             <Menu>
                 <li> 
-                <Logo href="/">
+                <Logo to="/">
                     <img src={logo} alt="Logo" /> 
                   
                 </Logo>

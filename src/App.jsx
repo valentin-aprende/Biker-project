@@ -3,6 +3,7 @@ import Navbar from './components/navbar.jsx';
 import Footer from './components/footer.jsx';
 import ProductCustomizer from './Customizer.jsx';
 import Home from './components/home.jsx';
+import AdminPanel from './components/admin-panel.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -21,6 +22,11 @@ function App() {
           path="/producto/:id"
           element={<ProductCustomizer />}
         />
+
+        <Route
+          path="/admin"
+          element={<AdminPanel />}
+        />  
       </Routes>
 
       <Footer />

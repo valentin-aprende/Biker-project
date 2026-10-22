@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { ProductContext } from './context/product-context.jsx'
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
 
 
 const Main = styled.div`
@@ -65,7 +64,7 @@ function Customizer(){
   const { products } = useContext(ProductContext);
 
   const product = products.find(
-    p => p.id === (id)
+    p => p._id === (id)
   ); 
   const [formData, setFormData] = useState({
     nombre: '',

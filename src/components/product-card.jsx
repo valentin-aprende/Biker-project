@@ -30,33 +30,32 @@ const ProductTitle = styled.h3`
 const ProductDescription = styled.p`
     font-size: 0.7rem;
     color: white;
-    `;  
-
-const ProductPrice = styled.p`
-    font-size: 0.8rem;
-    color: white;   
-    margin-top: 5px;
     `;
 
-const AddToCartButton = styled.button`
-    background-color: #d70202;
-    color: white;    
-    `;
 
-    function ProductCard({ id, image, title, description, price }) {
-        return (
-            <>
-                <CardLink to={`/producto/${id}`}>  
-                    <ProductCardContainer>
-                        <CardImage src={image} alt={title} />
-                        <ProductTitle>{title}</ProductTitle>
-                        <ProductDescription>{description}</ProductDescription>
-                        <ProductPrice>${price}</ProductPrice>
-                                   
-                    </ProductCardContainer>
-                </CardLink>    
-            </>
-        );
-    }
 
-    export default ProductCard;
+function ProductCard({ id, image, title, description, price }) {
+    return (
+        <>
+            <CardLink to={`/producto/${id}`}>
+                <ProductCardContainer>
+                    <CardImage
+                        src={image}
+                        alt={title}
+                    />
+
+                    <ProductTitle>
+                        {title}
+                    </ProductTitle>
+
+                    <ProductDescription>
+                        {description}
+                    </ProductDescription>
+
+                </ProductCardContainer>
+            </CardLink>
+        </>
+    );
+}
+
+export default ProductCard;

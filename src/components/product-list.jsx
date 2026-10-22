@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import { ProductContext } from "../context/product-context.jsx";
-import React, { useState, useEffect } from 'react';
 import styled from  'styled-components';
-import axios from 'axios';
 import ProductCard from './product-card.jsx';
 
 const Section= styled.section`
@@ -26,6 +24,8 @@ const Sectiontitle = styled.h2`
 function ProductList() {
 
     const { products } = useContext(ProductContext);
+    console.log("ProductList", products);
+
 
     return (
         <>
@@ -34,12 +34,11 @@ function ProductList() {
             <Section>
                 {products.map((product) => (
                     <ProductCard
-                        key={product.id}
-                        id={product.id}
+                        key={product._id}
+                        id={product._id}
                         image={product.imagen}
                         title={product.nombre}
                         description={product.descripcion}
-                        price={product.precio}
                     />
                 ))}
 

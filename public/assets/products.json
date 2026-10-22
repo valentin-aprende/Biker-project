@@ -3,8 +3,7 @@
         "id": "1",
         "imagen": "/assets/images/veneno.jpg",
         "nombre": "Casco Veneno",
-        "descripcion": "Casco de protección homologado por el Departamento de Transporte de los Estados Unidos con diferentes opciones de personalización",
-        "precio": "$$"
+        "descripcion": "Casco de protección homologado por el Departamento de Transporte de los Estados Unidos con diferentes opciones de personalización"
         
     },
 
@@ -12,8 +11,7 @@
         "id": "2",
         "imagen": "/assets/images/punk.jpg",
         "nombre": "Casco Punk",
-        "descripcion": "Casco de protección homologado por el Departamento de Transporte de los Estados Unidos con diferentes opciones de personalización",
-        "precio": "$$"
+        "descripcion": "Casco de protección homologado por el Departamento de Transporte de los Estados Unidos con diferentes opciones de personalización"
         
     },
 
@@ -21,8 +19,7 @@
         "id": "3",
         "imagen": "assets/images/rastas.jpg",
         "nombre": "Casco Rastas",
-        "descripcion": "Casco de protección homologado por el Departamento de Transporte de los Estados Unidos con diferentes opciones de personalización",
-        "precio": "$$"
+        "descripcion": "Casco de protección homologado por el Departamento de Transporte de los Estados Unidos con diferentes opciones de personalización"
         
     }
 ]
