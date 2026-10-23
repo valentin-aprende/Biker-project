@@ -14,6 +14,10 @@ const ProductCardContainer = styled.div`
     width: 300px;
     border-radius: 5px;
     background-color: #d70202;
+    color: white;
+     &:hover{
+    color: black
+    }
     `;
 
 const CardImage = styled.img`
@@ -24,7 +28,7 @@ const CardImage = styled.img`
 
 const ProductTitle = styled.h3`
     font-size: 0.95rem;
-    color: white;
+    color: inherit;
     `;
 
 const ProductDescription = styled.p`

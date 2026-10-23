@@ -9,7 +9,7 @@ const Sectiontitle = styled.h2`
     text-align: center;
     flex-wrap: wrap;
     margin-bottom: 20px;
-`;  
+    `;  
 
 const RedesSection = styled.section`
     display: flex;
@@ -22,17 +22,26 @@ const RedesSection = styled.section`
     justify-content: center;
     `;
 
+const RedesLink = styled.a`
+    text-decoration: none;
+    color: white;
+    &:hover{
+    color: black
+    }
+`;    
+
 const RedesCard = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: #d70202;
-    color: white;
     width: 300px;
     border-radius: 5px;
     background-color: #black;
+    text-decoration: none;
     height: 70px;`;
+    
     
 const RedesIcon = styled.img` 
     width: 50px;
@@ -52,23 +61,23 @@ function Redes() {
         <>
         <Sectiontitle id="redes">Nuestras Redes Sociales</Sectiontitle>
         <RedesSection>
-            <a href="https://www.youtube.com/@BikerRiderDangerous28-w7r"><RedesCard>
+            <RedesLink href="https://www.youtube.com/@BikerRiderDangerous28-w7r" target="_blank" rel="noreferrer noopener"><RedesCard>
                 <RedesIcon src={YT} alt="YouTube" />
                 <h3>YouTube</h3>
             </RedesCard>
-            </a>
-            <a href="https://www.facebook.com/dangeros27/"><RedesCard>
+            </RedesLink>
+            <RedesLink href="https://www.facebook.com/dangeros27/" target="_blank" rel="noreferrer noopener"><RedesCard>
                 <RedesIcon src={FB} alt="Facebook" />
                 <h3>Facebook</h3>
             </RedesCard>
-            </a>
+            </RedesLink>
         
-            <a href="https://www.tiktok.com/@biker.rider2?_r=1&_t=ZS-9Adpo4igGST">
+            <RedesLink href="https://www.tiktok.com/@biker.rider2?_r=1&_t=ZS-9Adpo4igGST" target="_blank" rel="noreferrer noopener" alt="Tiktok">
                 <RedesCard>
-                <RedesIcon src={Tiktok} alt="Tiktok" />
+                <RedesIcon src={Tiktok} />
                 <h3>Tiktok</h3>
             </RedesCard>
-            </a>            
+            </RedesLink>            
         </RedesSection>
         </>)};
         

@@ -4,15 +4,16 @@ import logo from '../assets/Designer.png';
 
 const Nav = styled.nav`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #d70202;
   padding: 10px;
   `
 const Logo= styled.a`
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  margin-right: auto;
+  
   
 
   img {
@@ -25,15 +26,19 @@ const Logo= styled.a`
 
 const Menu = styled.ul`
   display: flex;
-  justify-content: space-around;
   color: white;
-  gap: 20px;
+  gap: 40px;
   font-weight: bold;
   list-style-type: none;
+  color: white;
+  
     
     a {
     text-decoration: none; 
-    color: white;       
+    color: inherit; 
+     &:hover{
+    color: black
+    }      
 }
 `
 
@@ -41,13 +46,11 @@ function Navbar() {
     return (
         <Nav>
             
-            <Menu>
-                <li> 
-                <Logo href="/">
+            <Logo href="/">
                     <img src={logo} alt="Logo" /> 
                   
                 </Logo>
-                </li>
+            <Menu>
                 <li><a href="/#servicios">Servicios</a></li>
                 <li><a href="/#productos"> Cascos personalizados</a></li>
                 {/*<li><a href="#clases">Clases</a></li>*/}
