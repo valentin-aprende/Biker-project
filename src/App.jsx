@@ -5,32 +5,38 @@ import ProductCustomizer from './Customizer.jsx';
 import Home from './components/home.jsx';
 import AdminPanel from './components/admin-panel.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NotFound from "./components/NotFound.jsx";
 
 function App() {
   return (
     <ProductProvider>
-    <Router>
-      <Navbar />
+      <Router>
+        <Navbar />
 
-      <Routes>
-        <Route
-          path="/"
-          element={<Home />}
-        />
+        <Routes>
+          <Route
+            path="/"
+            element={<Home />}
+          />
 
-        <Route
-          path="/producto/:id"
-          element={<ProductCustomizer />}
-        />
+          <Route
+            path="/producto/:id"
+            element={<ProductCustomizer />}
+          />
 
-        <Route
-          path="/admin"
-          element={<AdminPanel />}
-        />  
-      </Routes>
+          <Route
+            path="/admin"
+            element={<AdminPanel />}
+          />
+          <Route
+            path="*"
+            element={<NotFound />}
+          />
 
-      <Footer />
-    </Router>
+        </Routes>
+
+        <Footer />
+      </Router>
     </ProductProvider>
   );
 }

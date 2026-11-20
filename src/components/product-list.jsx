@@ -34,8 +34,8 @@ function ProductList() {
             <Section>
                 {products.map((product) => (
                     <ProductCard
-                        key={product._id}
-                        id={product._id}
+                        key={product.id}
+                        id={product.id}
                         image={product.imagen}
                         title={product.nombre}
                         description={product.descripcion}

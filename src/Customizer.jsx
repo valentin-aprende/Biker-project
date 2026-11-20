@@ -64,7 +64,7 @@ function Customizer(){
   const { products } = useContext(ProductContext);
 
   const product = products.find(
-    p => p._id === (id)
+    p => p.id === Number(id)
   ); 
   const [formData, setFormData] = useState({
     nombre: '',
