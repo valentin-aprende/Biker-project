@@ -8,7 +8,6 @@ function Home() {
   return (
     <>
       <Hero />
-      <WeatherWidget />
       <Services />
       <ProductList />
       <Redes />

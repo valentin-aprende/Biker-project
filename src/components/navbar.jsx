@@ -1,62 +1,96 @@
 import styled from "styled-components";
-import logo from '../assets/Designer.png';
+import logo from "../assets/Designer.png";
 import { Link } from "react-router-dom";
-
-
+import WeatherMiniWidget from "./WeatherWidget.jsx";
 
 const Nav = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #d70202;
-  padding: 10px;
-  `
-const Logo= styled(Link)`
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-  
+    width: 100%;
+    box-sizing: border-box;
 
-  img {
-    height: 40px; 
-    width: auto;
-  }
+    display: flex;
+    align-items: center;
+
+    background-color: #d70202;
+
+    padding: 10px 20px;
 `;
 
+const Logo = styled(Link)`
+    flex-shrink: 0;
 
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 40px;
+        width: auto;
+    }
+`;
 
 const Menu = styled.ul`
-  display: flex;
-  justify-content: space-around;
-  color: white;
-  gap: 20px;
-  font-weight: bold;
-  list-style-type: none;
-    
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    margin: 0 20px;
+
+    padding: 0;
+
+    list-style: none;
+
     a {
-    text-decoration: none; 
-    color: white;       
-}
-`
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+`;
+
+const Spacer = styled.div`
+    flex: 1;
+`;
 
 function Navbar() {
+
     return (
         <Nav>
-            
+
+            <Logo to="/">
+                <img
+                    src={logo}
+                    alt="Logo"
+                />
+            </Logo>
+
             <Menu>
-                <li> 
-                <Logo to="/">
-                    <img src={logo} alt="Logo" /> 
-                  
-                </Logo>
+
+                <li>
+                    <a href="/#servicios">
+                        Servicios
+                    </a>
                 </li>
-                <li><a href="/#servicios">Servicios</a></li>
-                <li><a href="/#productos"> Cascos personalizados</a></li>
-                {/*<li><a href="#clases">Clases</a></li>*/}
-                <li><a href="/#redes">Redes</a></li>
+
+                <li>
+                    <a href="/#productos">
+                        Cascos personalizados
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/#redes">
+                        Redes
+                    </a>
+                </li>
+
             </Menu>
+
+            <Spacer />
+
+            <WeatherMiniWidget />
+
         </Nav>
-    )
+    );
 }
 
 export default Navbar;
